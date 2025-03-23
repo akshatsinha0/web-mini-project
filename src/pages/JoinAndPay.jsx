@@ -1,6 +1,6 @@
 // src/pages/JoinAndPay.jsx
 import React from 'react';
-import bgImage from '../assets/bg.png';
+import bgImage from '../assets/bg.png'; 
 
 const JoinAndPay = () => {
   const handlePayment = () => {
