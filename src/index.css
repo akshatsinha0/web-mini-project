@@ -15,3 +15,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.neon-maroon-hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.neon-maroon-hover:hover {
+  text-shadow: 0 0 10px #800000, 0 0 20px #800000 !important;
+}

@@ -1,5 +1,7 @@
 import React from "react";
- import DummyImage from '../assets/memberImages/JohnDoe.png'
+ import DummyImage from '../assets/memberImages/Akshat image.png'
+ import SahajPic from '../assets/memberImages/Sahaj image.jpg';
+
 
 export default function TeamCards({ name, post, data,linkedin,twitter,phone,img,github}) {
   return (

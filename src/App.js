@@ -6,6 +6,7 @@ import About from './pages/about';
 import { Routes, Route} from "react-router-dom";
 import Footer from './components/Footer'
 import Event from './pages/event';
+import Photos from './pages/Photos'; 
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/ClubWebsite/event" element={<Event/>}/>
       <Route path="/ClubWebsite/contact" element={<Contact/>}/>
       <Route path="/ClubWebsite/team" element={<About/>}/>
+      <Route path="/ClubWebsite/photos" element={<Photos/>}/> 
       {/* <Route path="/events" element={<Events/>}/> */}
     </Routes>
     <Footer/>

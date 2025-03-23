@@ -9,6 +9,7 @@ const navigation = [
   { name: 'Events', href: '#', current: false,link:"/ClubWebsite/event",color:"purple" },
   { name: 'Team', href: '#', current: false,link:"/ClubWebsite/team",color:"yellow" },
   { name: 'Contact', href: '#', current: false,link:"/ClubWebsite/contact",color:"rose" },
+  { name: 'View Photos', href: '#', current: false, link: "/ClubWebsite/photos", color: "blue" },
 ]
 
 function classNames(...classes) {
@@ -92,6 +93,18 @@ export default function Example() {
                         aria-current={navigation[3].current ? 'page' : undefined}
                       >
                         {navigation[3].name}
+                        
+                      </a></Link>
+                      <Link to={navigation[4].link}>
+                      <a
+                        href="/"
+                        className={classNames(
+                        navigation[4].current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-blue-600 neon-maroon-hover',
+                        'px-3 py-2 rounded-md text-sm font-medium'
+                        )}
+                        aria-current={navigation[4].current ? 'page' : undefined}
+                      >
+                        {navigation[4].name}
                       </a></Link>
                   </div>
                 </div>
