@@ -10,6 +10,7 @@ const navigation = [
   { name: 'Team', href: '#', current: false,link:"/ClubWebsite/team",color:"yellow" },
   { name: 'Contact', href: '#', current: false,link:"/ClubWebsite/contact",color:"rose" },
   { name: 'View Photos', href: '#', current: false, link: "/ClubWebsite/photos", color: "blue" },
+  { name: 'Join & Pay', href: '#', current: false, link: "/ClubWebsite/join-and-pay", color: "green" },
 ]
 
 function classNames(...classes) {
@@ -106,6 +107,14 @@ export default function Example() {
                       >
                         {navigation[4].name}
                       </a></Link>
+                      <Link to={navigation[5].link}>
+                      <button
+                      className="px-3 py-2 bg-green-600 text-white rounded-md text-sm font-medium hover:bg-green-700"
+                      >
+                        {navigation[5].name}
+                      </button>
+                      </Link>
+                      
                   </div>
                 </div>
               </div>

@@ -7,6 +7,7 @@ import { Routes, Route} from "react-router-dom";
 import Footer from './components/Footer'
 import Event from './pages/event';
 import Photos from './pages/Photos'; 
+import JoinAndPay from './pages/JoinAndPay';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path="/ClubWebsite/contact" element={<Contact/>}/>
       <Route path="/ClubWebsite/team" element={<About/>}/>
       <Route path="/ClubWebsite/photos" element={<Photos/>}/> 
+      <Route path="/ClubWebsite/join-and-pay" element={<JoinAndPay />} />
       {/* <Route path="/events" element={<Events/>}/> */}
     </Routes>
     <Footer/>
