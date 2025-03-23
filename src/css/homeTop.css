@@ -1,0 +1,33 @@
+.particlejs-top{
+    height:'750px';
+    border: 1px solid white;
+    /* z-index: 100;
+    box-shadow: 500px 400px 400px 100px ; */
+}
+
+/* .home-main-heading{
+    display: inline-block;
+    position:relative;
+        top: -91px;
+        left: 10vw;
+    padding-left: 2.5em;
+    border: 2px solid white;
+} */
+.heading{
+    top: 40vh;
+    left: 12vw;
+    position: absolute;
+    font-family: sans-serif;
+    color: aliceblue;
+    font-weight:800;
+    font-size:5em;
+    text-align: center;
+}
+
+@media (max-width: 600px){
+    .heading {
+        top: 30vh;
+        left: 10vw;
+        font-size: 3.5em;
+    }
+}
