@@ -17,7 +17,7 @@ export default function HomeBottom() {
 
   return (
     <div
-      className="overflow-hidden"
+      className="overflow-hidden w-11/12 mx-auto mt-10 relative"
       style={{
         width: "80vw",
         marginLeft: "10vw",
@@ -31,7 +31,7 @@ export default function HomeBottom() {
           letterSpacing: "-0.0001em",
           fontStyle: "normal",
           fontWeight: "800",
-          fontSize: "10em",
+          fontSize: "4em",
           marginTop: 0 // Current gap
         }}
       >

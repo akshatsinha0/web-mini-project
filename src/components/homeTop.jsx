@@ -17,7 +17,8 @@ export default function HomeTop() {
     <>
       <div className="particlejs-top">
         <Particle />
-        <div className={`heading ${fadeIn ? 'fade-in' : ''}`}>
+        <div className={`heading ${fadeIn ? 'fade-in' : ''} text-xl sm:text-2xl md:text-7xl
+    leading-tight`}>
           <Typewriter
             onInit={(typewriter) => {
               typewriter.typeString("CODING CLUB-VIT Vellore").start();
