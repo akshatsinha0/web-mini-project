@@ -21,17 +21,18 @@ export default function HomeBottom() {
       style={{
         width: "80vw",
         marginLeft: "10vw",
-        marginTop: "850px",
+        marginTop: "100px",
         position: "relative",
       }}
     >
       <h1
         className="font-medium text-5xl mt-0 mb-2 text-gray-400"
         style={{
-          letterSpacing: "-0.02em",
+          letterSpacing: "-0.0001em",
           fontStyle: "normal",
           fontWeight: "800",
-          fontSize: "4em",
+          fontSize: "10em",
+          marginTop: 0 // Current gap
         }}
       >
         Departments

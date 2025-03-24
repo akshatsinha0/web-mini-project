@@ -1,5 +1,5 @@
 body{
-  background-color: rgb(13, 17, 23);
+  background-color: rgb(65, 85, 114);
 }
 .neon-maroon-hover {
   transition: all 0.3s ease-in-out;
@@ -8,3 +8,29 @@ body{
 .neon-maroon-hover:hover {
   text-shadow: 0 0 10px #800000, 0 0 20px #800000 !important;
 }
+
+body {
+  margin: 0;
+  background-color: #0d1117
+}
+
+div {
+  color: #f0f8ff;
+  font-family: monospace;
+}
+
+div::after {
+  content: "|";
+  animation: blink 0.5s step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+

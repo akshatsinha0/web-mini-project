@@ -39,7 +39,7 @@ export default function Event() {
                             type2="Workshop"
                             date2="13 December 2024" // Updated from 2022
                             desc2="This was the second installment and a continuation of the previous session, conducted by Competitive Programming Department."
-                            poster_img2="https://images.unsplash.com/photo-1563986768494-5bbb979d6d83?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80"
+                            poster_img2="https://d15cw65ipctsrr.cloudfront.net/aa/69d17c66aa42848a99fa8deb903c93/NYU-intro-to-cybersecurity-2-.png"
                             duration2="2 hrs"
                             color2="green"
                             name="Codenite"

@@ -20,7 +20,7 @@ function classNames(...classes) {
 export default function Example() {
   return (
     <div style={{position:'fixed',width:'100vw',zIndex:'100'}}>
-    <Disclosure as="nav" className="bg-slate-800" style={{backgroundColor:'black'}}>
+    <Disclosure as="nav" className="bg-slate-800 pt -2" style={{backgroundColor:'black'}}>
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -49,7 +49,7 @@ export default function Example() {
                     alt="Your Company"
                   />
                 </div>
-                <div className="hidden sm:ml-6 sm:block">
+                <div className="hidden sm:ml-6 sm:block mt -2">
                   <div className="flex space-x-4">
                       <Link to={navigation[0].link}>
                       <a
@@ -67,7 +67,7 @@ export default function Example() {
                         href="/"
                         className={classNames(
                           navigation.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-violet-600 hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium'
+                          'px-3 py-2 rounded-md text-sm font-medium mt -5'
                         )}
                         aria-current={navigation[1].current ? 'page' : undefined}
                       >

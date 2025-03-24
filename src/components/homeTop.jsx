@@ -1,30 +1,31 @@
-import React from 'react'
-import '../css/homeTop.css'
+import React, { useState, useEffect } from 'react';
+import '../css/homeTop.css';
 import Typewriter from 'typewriter-effect';
-// import starBG from '../assets/stars.jpg'
+import Particle from './Particle';
 
-import Particle from './Particle'
+export default function HomeTop() {
+  const [fadeIn, setFadeIn] = useState(false);
 
-export default function homeTop() {
-  
+  useEffect(() => {
+    // Trigger fade-in animation after a short delay
+    setTimeout(() => {
+      setFadeIn(true);
+    }, 1000); // 1 second delay
+  }, []);
+
   return (
     <>
-    <div class="particlejs-top">
-        <Particle/>
-        <div className='heading'>
-        <Typewriter
-  
-       onInit={(typewriter)=> {
-  
-       typewriter
-        
-       .typeString("CODING CLUB-VIT Vellore")
-       .start();
-       }}
-       />
+      <div className="particlejs-top">
+        <Particle />
+        <div className={`heading ${fadeIn ? 'fade-in' : ''}`}>
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter.typeString("CODING CLUB-VIT Vellore").start();
+            }}
+            
+          />
         </div>
-    </div>
+      </div>
     </>
-    
-  )
+  );
 }

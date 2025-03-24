@@ -18,7 +18,7 @@
     left: 12vw;
     position: absolute;
     font-family: sans-serif;
-    color: aliceblue;
+    color: aliceblue !important;
     font-weight:800;
     font-size:5em;
     text-align: center;
@@ -31,3 +31,35 @@
         font-size: 3.5em;
     }
 }
+
+/* src/css/homeTop.css */
+.particlejs-top {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: black;
+  }
+  
+  .heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold; 
+  }
+  
+  .heading.fade-in {
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+  }
+  
+  .heading {
+    opacity: 0; /* Initially hidden */
+  }
+  
+  .particlejs-top .heading {
+    color: AliceBlue !important; 
+  }

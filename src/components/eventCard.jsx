@@ -1,6 +1,5 @@
 import React from "react";
-import { useState } from "react";
-import Modal from "./modal";
+
 
 export default function eventCard({name,type,date,desc,poster_img,duration,color,secondCard,name2,type2,date2,desc2,poster_img2,duration2,color2}) {
 
