@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 0 4px rgba(40, 216, 186, 0.8)
 }
 
 code {
@@ -23,3 +24,34 @@ code {
 .neon-maroon-hover:hover {
   text-shadow: 0 0 10px #800000, 0 0 20px #800000 !important;
 }
+
+@keyframes curtainReveal {
+  0% {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0.5;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+.curtain-animation {
+  animation: curtainReveal 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+

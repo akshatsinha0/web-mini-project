@@ -9,7 +9,9 @@ import Event from './pages/event';
 import Photos from './pages/Photos'; 
 import JoinAndPay from './pages/JoinAndPay';
 
+
 function App() {
+  
   return (
     <div className="app">
     <Navbar/>

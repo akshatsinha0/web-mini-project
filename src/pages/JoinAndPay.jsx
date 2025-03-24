@@ -29,17 +29,38 @@ const JoinAndPay = () => {
   };
 
   return (
-    <div 
-      className="min-h-screen flex flex-col justify-center items-center bg-cover bg-center"
+    <div
+      className="
+        min-h-screen 
+        flex flex-col 
+        justify-center 
+        items-center 
+        bg-cover 
+        bg-center 
+        curtain-animation
+      "
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <div className="bg-black bg-opacity-50 p-10 rounded-lg text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Join & Pay</h1>
-        <p className="text-lg text-gray-200 mb-8">
-          To take part in our exciting events, please proceed to payment.
+      <div className="bg-black bg-opacity-50 p-10 rounded-lg text-center fade-up shadow-xl">
+        <h1 className="text-4xl font-bold text-white mb-4">
+          Join & Pay
+        </h1>
+        <p className="text-lg text-gray-200 mb-8 max-w-lg mx-auto">
+          To take part in our exciting events, please proceed to payment by clicking the button below.
         </p>
         <button
-          className="px-6 py-3 bg-green-600 text-white rounded-md text-xl font-medium hover:bg-green-700 transition duration-300"
+          className="
+            px-6 
+            py-3 
+            bg-green-600 
+            text-white 
+            rounded-md 
+            text-xl 
+            font-medium 
+            hover:bg-green-700 
+            transition 
+            duration-300
+          "
           onClick={handlePayment}
         >
           Proceed to Payment

@@ -1,6 +1,20 @@
+// src/pages/HomeBottom.jsx
 import React from "react";
+import useOnScreen from "../hooks/useOnScreen"; // import the custom hook
 
-export default function homeBottom() {
+export default function HomeBottom() {
+  // For each section, you can use the hook. Here, we'll do it for the Development section.
+  const [devRef, devVisible] = useOnScreen({ threshold: 0.1 });
+  const [aiRef, aiVisible] = useOnScreen({ threshold: 0.1 });
+  const [secRef, secVisible] = useOnScreen({ threshold: 0.1 });
+  const [cpRef, cpVisible] = useOnScreen({ threshold: 0.1 });
+
+  // CSS classes to animate (modify as needed)
+  const animationClass = "transition-all duration-1000 ease-out";
+  const visibleClass = "opacity-100 translate-x-0";
+  const hiddenRight = "opacity-0 translate-x-20";
+  const hiddenLeft = "opacity-0 -translate-x-20";
+
   return (
     <div
       className="overflow-hidden"
@@ -12,7 +26,7 @@ export default function homeBottom() {
       }}
     >
       <h1
-        className="font-medium font-style: normal; text-5xl mt-0 mb-2 text-gray-400"
+        className="font-medium text-5xl mt-0 mb-2 text-gray-400"
         style={{
           letterSpacing: "-0.02em",
           fontStyle: "normal",
@@ -22,8 +36,14 @@ export default function homeBottom() {
       >
         Departments
       </h1>
+      
       {/* Development Section */}
-      <section className="text-gray-600 body-font">
+      <section
+        ref={devRef}
+        className={`text-gray-600 body-font ${animationClass} ${
+          devVisible ? visibleClass : hiddenRight
+        }`}
+      >
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <div className="lg:w-1/4 md:w-1/2 w-5/6 mb-10 md:mb-0 flex items-center">
             <img
@@ -37,14 +57,22 @@ export default function homeBottom() {
               Development
             </h1>
             <p className="mb-8 leading-relaxed text-gray-200">
-              The development Department in our club encompasses Web Development, Android/iOS Development, Open Source Projects and much more. The tech stack for various developments are ever evolving. The role of this department is to keep the community updated with these techs and provide opportunities for projects.
+              The development Department in our club encompasses Web Development,
+              Android/iOS Development, Open Source Projects and much more. The tech stack for
+              various developments are ever evolving. The role of this department is to keep the
+              community updated with these techs and provide opportunities for projects.
             </p>
-            <div className="flex justify-center"></div>
           </div>
         </div>
       </section>
-      {/* AI Section */}
-      <section className="text-gray-600 body-font">
+      
+      {/* Artificial Intelligence Section */}
+      <section
+        ref={aiRef}
+        className={`text-gray-600 body-font ${animationClass} ${
+          aiVisible ? visibleClass : hiddenLeft
+        }`}
+      >
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <div className="lg:w-1/4 md:w-1/2 w-5/6 mb-10 md:mb-0 flex items-center">
             <img
@@ -58,14 +86,21 @@ export default function homeBottom() {
               Artificial Intelligence
             </h1>
             <p className="mb-8 leading-relaxed text-gray-200">
-              Artificial intelligence (AI) is a wide-ranging branch of computer science. AI is an interdisciplinary science with multiple approaches, but advancements in machine learning and deep learning are creating a paradigm shift in virtually every sector of the tech industry.
+              Artificial intelligence (AI) is a wide-ranging branch of computer science. AI is an
+              interdisciplinary science with multiple approaches, but advancements in machine
+              learning and deep learning are creating a paradigm shift in virtually every sector of the tech industry.
             </p>
-            <div className="flex justify-center"></div>
           </div>
         </div>
       </section>
-      {/* Security Section */}
-      <section className="text-gray-600 body-font">
+      
+      {/* Network and Security Section */}
+      <section
+        ref={secRef}
+        className={`text-gray-600 body-font ${animationClass} ${
+          secVisible ? visibleClass : hiddenRight
+        }`}
+      >
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <div className="lg:w-1/4 md:w-1/2 w-5/6 mb-10 md:mb-0 flex items-center">
             <img
@@ -79,14 +114,19 @@ export default function homeBottom() {
               Network and Security
             </h1>
             <p className="mb-8 leading-relaxed text-gray-200">
-              Network security is a domain designed to protect the usability and integrity of your network and data. It includes both hardware and software technologies. The role of this department is to educate our community with these technologies and provide a peer group for people with same interest.
+              Network security is a domain designed to protect the usability and integrity of your network and data. It includes both hardware and software technologies. The role of this department is to educate our community with these technologies and provide a peer group for people with the same interest.
             </p>
-            <div className="flex justify-center"></div>
           </div>
         </div>
       </section>
-      {/* CP Section */}
-      <section className="text-gray-600 body-font">
+      
+      {/* Competitive Programming Section */}
+      <section
+        ref={cpRef}
+        className={`text-gray-600 body-font ${animationClass} ${
+          cpVisible ? visibleClass : hiddenLeft
+        }`}
+      >
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <div className="lg:w-1/4 md:w-1/2 w-5/6 mb-10 md:mb-0 flex items-center">
             <img
@@ -102,7 +142,6 @@ export default function homeBottom() {
             <p className="mb-8 leading-relaxed text-gray-200">
               Competitive Programming is a mental sport which enables you to code a given problem under provided constraints. Our CP department guides every individual possessing a desire to excel in this sport. We also conduct regular workshops and provide roadmaps and peer groups for students interested in Competitive Programming.
             </p>
-            <div className="flex justify-center"></div>
           </div>
         </div>
       </section>
