@@ -20,6 +20,9 @@ export default function HomeTop() {
         <div className={`heading ${fadeIn ? 'fade-in' : ''} text-xl sm:text-2xl md:text-7xl
     leading-tight`}>
           <Typewriter
+          options={{
+            delay: 121 // lower = faster typing, higher = slower
+          }}
             onInit={(typewriter) => {
               typewriter.typeString("CODING CLUB-VIT Vellore").start();
             }}
