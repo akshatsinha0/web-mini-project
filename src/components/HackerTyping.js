@@ -1,24 +1,25 @@
-// src/components/HackerTyping.js
+// src/components/HackerTyping.js 
 import React, { useEffect, useRef } from "react";
 
 const HackerScrolling = () => {
   const containerRef = useRef(null);
-
-  // Array of custom messages
-  const customMessages = [
+  // Use a ref for custom messages so the effect doesn't depend on it
+  const customMessagesRef = useRef([
     "Initializing system...",
     "Loading modules...",
     "Connecting to server...",
     "Fetching data...",
     "System ready.",
     "Welcome to Coding Club!",
-  ];
+  ]);
 
   // Function to generate random hacker-like text
   const generateRandomText = () => {
-    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}|;:,.<>?";
+    const characters =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}|;:,.<>?";
     let text = "";
-    for (let i = 0; i < Math.floor(Math.random() * 80) + 20; i++) {
+    const length = Math.floor(Math.random() * 80) + 20;
+    for (let i = 0; i < length; i++) {
       text += characters.charAt(Math.floor(Math.random() * characters.length));
     }
     return text;
@@ -27,38 +28,38 @@ const HackerScrolling = () => {
   useEffect(() => {
     const container = containerRef.current;
 
-    // Append random lines of text at regular intervals
     const interval = setInterval(() => {
       if (container) {
-        // Add a random line of hacker text
+        // Create a random line of hacker text
         const randomTextLine = document.createElement("div");
         randomTextLine.textContent = generateRandomText();
-        randomTextLine.style.color = "#00ff00"; // Green text color for hacker vibe
+        randomTextLine.style.color = "#00ff00"; // Green text color
         randomTextLine.style.fontFamily = "monospace";
         container.appendChild(randomTextLine);
 
-        // Add custom messages at specific intervals
-        if (customMessages.length > 0 && Math.random() < 0.1) {
+        // Occasionally insert a custom message
+        if (customMessagesRef.current.length > 0 && Math.random() < 0.1) {
           const messageLine = document.createElement("div");
-          messageLine.textContent = customMessages.shift(); // Remove the first message from the array
+          messageLine.textContent = customMessagesRef.current.shift(); // Remove the first message
           messageLine.style.color = "#00ff00";
           messageLine.style.fontFamily = "monospace";
           messageLine.style.fontWeight = "bold";
           container.appendChild(messageLine);
         }
 
-        // Scroll down automatically
+        // Auto-scroll to the bottom
         container.scrollTop = container.scrollHeight;
 
-        // Stop adding lines when all custom messages are displayed
-        if (customMessages.length === 0) {
+        // Optionally, stop the interval when all custom messages are displayed.
+        // (Note: This will also stop adding random lines; remove this if you want continuous scrolling.)
+        if (customMessagesRef.current.length === 0) {
           clearInterval(interval);
         }
       }
-    }, 100); // Adjust typing speed here
+    }, 100); // Adjust the interval for typing speed
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []);
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []); // Empty dependency array—customMessagesRef doesn't need to be added
 
   return (
     <div
@@ -67,7 +68,7 @@ const HackerScrolling = () => {
         height: "100vh",
         backgroundColor: "black",
         color: "#00ff00",
-        overflowY: "hidden",
+        overflowY: "auto", // Changed to auto so scrolling is visible
         padding: "10px",
       }}
     ></div>
