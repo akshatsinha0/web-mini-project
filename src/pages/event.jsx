@@ -82,7 +82,7 @@ export default function Event() {
                             type="Workshop"
                             date="22 November 2024" // Updated from 2022
                             desc="This session was conducted by Aman Pratap Singh (4th year BTech) along with the Development department in which basics of HTML and CSS were covered."
-                            poster_img="https://images.pexels.com/photos/39284/code-coding-web-development-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            poster_img="https://miro.medium.com/v2/resize:fit:1200/1*IYQnAWgsoxvm8XPP2Rmzbg.jpeg"
                             duration="2 hrs"
                             color="green"
                         />
