@@ -8,17 +8,18 @@ function Photos() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://api.unsplash.com/search/photos?query=coding&per_page=9&client_id=${accessKey}`)
+    // Fetch 9 random photos related to "coding" every time the component mounts
+    fetch(`https://api.unsplash.com/photos/random?client_id=${accessKey}&query=coding&count=30`)
       .then(response => response.json())
       .then(data => {
-        setPhotos(data.results); // Use the "results" array
+        setPhotos(data); // data is an array of random photos
         setLoading(false);
       })
       .catch(error => {
         console.error('Error fetching photos:', error);
         setLoading(false);
       });
-  }, [accessKey]);
+  }, []);
 
   return (
     <div className="container mx-auto p-4">
