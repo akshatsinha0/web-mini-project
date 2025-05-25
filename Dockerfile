@@ -6,11 +6,11 @@ WORKDIR /app
 
 # Copy package metadata & install dependencies
 COPY package*.json vite.config.* ./
-RUN npm ci
+RUN npm install           # use install instead of ci to avoid lockfile mismatch
 
 # Copy source code and build
 COPY . .
-RUN npm run build   # outputs to /app/dist
+RUN npm run build         # outputs to /app/dist
 
 # Stage 2: Serve the built assets with NGINX
 FROM nginx:stable-alpine
