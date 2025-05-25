@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-mini-deploy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web-mini
+  template:
+    metadata:
+      labels:
+        app: web-mini
+    spec:
+      containers:
+      - name: web-mini
+        image: 00akshatsinha00/web-mini-project:latest
+        ports:
+        - containerPort: 80
