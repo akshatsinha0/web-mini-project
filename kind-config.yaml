@@ -4,5 +4,5 @@ nodes:
 - role: control-plane
   extraPortMappings:
   - containerPort: 30080    # matches Service.nodePort
-    hostPort: 30080         # exposed on the EC2 host
+    hostPort: 31080         # exposed on the EC2 host
     protocol: TCP
